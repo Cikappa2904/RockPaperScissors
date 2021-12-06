@@ -61,6 +61,16 @@
                                 <Thickness>10,0,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
+                        <Setter Target="border1.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="border.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,22.3,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowHeight="500" MinWindowWidth="700"/>
@@ -89,20 +99,27 @@
                 <RadioButton x:Name="radioButton2" Content="Scissors" Margin="0,0,0,0" HorizontalAlignment="Center"/>
             </muxc:RadioButtons>
 
-            <Border x:Name="border" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="52">
-                <TextBlock x:Name="showPlayerMove" Text="✌️" FontSize="48"/>
-            </Border>
+            <StackPanel Orientation="Vertical">
+                <Border x:Name="border" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="52">
+                    <TextBlock x:Name="showPlayerMove" Text="✌️" FontSize="48"/>
+                </Border>
+                <TextBlock x:Name="playerStreak" Text="Your streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
+            </StackPanel>
+
             <Button x:Name="button" Margin="30,0,30,0" Click="Button_Click">Play</Button>
-            <Border x:Name="border1" BorderThickness="2" BorderBrush="Black" Width="67">
-                <TextBlock x:Name="showComputerMove" Text="🤔" FontSize="48" VerticalAlignment="Center"></TextBlock>
-            </Border>
+            <StackPanel Orientation="Vertical">
+                <Border x:Name="border1" BorderThickness="2" BorderBrush="Black" Width="67" Margin="0,0,0,0">
+                    <TextBlock x:Name="showComputerMove" Text="🤔" FontSize="48" VerticalAlignment="Center"></TextBlock>
+                </Border>
+                <TextBlock x:Name="pcStreak" Text="My streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
+            </StackPanel>
+
             <TextBlock x:Name="showComputerThought" Text="I'm thinking..." FontSize="18px" VerticalAlignment="Center" Margin="0,23.1,0,0"></TextBlock>
 
-            <TextBlock x:Name="streak" Text="0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"></TextBlock>
         </StackPanel>
 
         <ContentDialog x:Name="ContentDialog1" CloseButtonClick="ContentDialog_CloseButtonClick"/>
     </Grid>
-    
-    
+
+
 </Page>

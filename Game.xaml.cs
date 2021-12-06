@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,7 +32,7 @@ namespace RockPaperScissors
 
         string[] movesEmojis = new string[3] { "🪨", "📄", "✂️" };
         string[] movesText = new string[3] { "Rock", "Paper", "Scissors" };
-        int winStreak = 0;
+        int playerWinStreak = 0, pcWinStreak = 0;
 
         public Game()
         {
@@ -91,15 +92,16 @@ namespace RockPaperScissors
                     {
                         case 0:
                             DisplayResultDialog("Draw", "I chose rock, so it's a draw");
-                            winStreak = 0;
                             break;
                         case 1:
                             DisplayResultDialog("Victory", "I chose rock, so you won");
-                            winStreak++;
+                            pcWinStreak = 0;
+                            playerWinStreak++;
                             break;
                         case 2:
                             DisplayResultDialog("Lost", "I chose rock, so I won");
-                            winStreak = 0;
+                            playerWinStreak = 0;
+                            pcWinStreak++;
                             break;
 
                     }
@@ -109,15 +111,16 @@ namespace RockPaperScissors
                     {
                         case 0:
                             DisplayResultDialog("Lost", "I chose paper, so I won");
-                            winStreak = 0;
+                            pcWinStreak++;
+                            playerWinStreak = 0;
                             break;
                         case 1:
                             DisplayResultDialog("Draw", "I chose paper, it's a draw");
-                            winStreak = 0;
                             break;
                         case 2:
                             DisplayResultDialog("Victory", "I chose paper, so you won");
-                            winStreak++;
+                            pcWinStreak = 0;
+                            playerWinStreak++;
                             break;
 
                     }
@@ -127,15 +130,16 @@ namespace RockPaperScissors
                     {
                         case 0:
                             DisplayResultDialog("Victory", "I chose scissors, so you won");
-                            winStreak++;
+                            playerWinStreak++;
+                            pcWinStreak = 0;
                             break;
                         case 1:
                             DisplayResultDialog("Lost", "I chose scissors, so I won");
-                            winStreak = 0;
+                            pcWinStreak++;
+                            playerWinStreak = 0;
                             break;
                         case 2:
                             DisplayResultDialog("Draw", "I chose scissors, so it's a draw");
-                            winStreak = 0;
                             break;
 
                     }
@@ -146,7 +150,8 @@ namespace RockPaperScissors
 
         private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            streak.Text = winStreak.ToString();
+            playerStreak.Text = "Streak: " + playerWinStreak.ToString();
+            pcStreak.Text = "Streak: " + pcWinStreak.ToString();
         }
     }
 }

@@ -48,3 +48,5 @@ D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\quali
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\ProjectArchitectures.txt
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\Core\ForBundle\AppxManifest.xml
+D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\RockPaperScissors.csproj.AssemblyReference.cache
