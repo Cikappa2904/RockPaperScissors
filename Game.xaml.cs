@@ -37,11 +37,20 @@ namespace RockPaperScissors
         public Game()
         {
             this.InitializeComponent();
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
+            rockRadioButton.Content = resourceLoader.GetString("Rock");
+            paperRadioButton.Content = resourceLoader.GetString("Paper");
+            scissorsRadioButton.Content = resourceLoader.GetString("Scissors");
+            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
+            button.Content = resourceLoader.GetString("Play");
+            playerStreak.Text = resourceLoader.GetString("Your streak") + ": 0";
+            pcStreak.Text = resourceLoader.GetString("My streak") + ": 0";
 
         }
 
-        
-        
+
+
 
         private void PlayerMove_Changed(object sender, SelectionChangedEventArgs e)
         {
@@ -62,10 +71,13 @@ namespace RockPaperScissors
 
         }
 
-        private async void DisplayResultDialog(string title, string content)
+        private async void DisplayResultDialog(string title, string content, string move, string content2)
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+            string tempContent = content + " " + resourceLoader.GetString(move) + content2;
+
             ContentDialog1.Title = title;
-            ContentDialog1.Content = content;
+            ContentDialog1.Content = tempContent;
             ContentDialog1.CloseButtonText = "Ok";
             ContentDialog1.DefaultButton = ContentDialogButton.Close;
 
@@ -73,6 +85,7 @@ namespace RockPaperScissors
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             showComputerThought.Text = "I'm thinking...";
             Random randNumber = new Random();
             int x = 0;
@@ -83,23 +96,24 @@ namespace RockPaperScissors
                 showComputerMove.Text = movesEmojis[x];
             }
 
-            showComputerThought.Text = "I chose " + movesText[x];
+            showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
 
             switch(x)
             {
                 case 0:
                     switch(playerMove_RadioButtons.SelectedIndex)
                     {
+
                         case 0:
-                            DisplayResultDialog("Draw", "I chose rock, so it's a draw");
+                            DisplayResultDialog(resourceLoader.GetString("Draw"), resourceLoader.GetString("I chose"), "Rock", resourceLoader.GetString(", so it's a draw"));
                             break;
                         case 1:
-                            DisplayResultDialog("Victory", "I chose rock, so you won");
+                            DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Rock", resourceLoader.GetString(", so you won"));
                             pcWinStreak = 0;
                             playerWinStreak++;
                             break;
                         case 2:
-                            DisplayResultDialog("Lost", "I chose rock, so I won");
+                            DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Rock", resourceLoader.GetString(", so you lost"));
                             playerWinStreak = 0;
                             pcWinStreak++;
                             break;
@@ -110,15 +124,15 @@ namespace RockPaperScissors
                     switch (playerMove_RadioButtons.SelectedIndex)
                     {
                         case 0:
-                            DisplayResultDialog("Lost", "I chose paper, so I won");
+                            DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you lost"));
                             pcWinStreak++;
                             playerWinStreak = 0;
                             break;
                         case 1:
-                            DisplayResultDialog("Draw", "I chose paper, it's a draw");
+                            DisplayResultDialog(resourceLoader.GetString("Draw"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", it's a draw"));
                             break;
                         case 2:
-                            DisplayResultDialog("Victory", "I chose paper, so you won");
+                            DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you won"));
                             pcWinStreak = 0;
                             playerWinStreak++;
                             break;
@@ -129,17 +143,17 @@ namespace RockPaperScissors
                     switch (playerMove_RadioButtons.SelectedIndex)
                     {
                         case 0:
-                            DisplayResultDialog("Victory", "I chose scissors, so you won");
+                            DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Scissors", resourceLoader.GetString(", so you won"));
                             playerWinStreak++;
                             pcWinStreak = 0;
                             break;
                         case 1:
-                            DisplayResultDialog("Lost", "I chose scissors, so I won");
+                            DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Scissors", resourceLoader.GetString(", so you lost"));
                             pcWinStreak++;
                             playerWinStreak = 0;
                             break;
                         case 2:
-                            DisplayResultDialog("Draw", "I chose scissors, so it's a draw");
+                            DisplayResultDialog(resourceLoader.GetString("Draw"), resourceLoader.GetString("I chose"), "Scissors", resourceLoader.GetString(", so it's a draw"));
                             break;
 
                     }
@@ -150,8 +164,9 @@ namespace RockPaperScissors
 
         private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            playerStreak.Text = "Streak: " + playerWinStreak.ToString();
-            pcStreak.Text = "Streak: " + pcWinStreak.ToString();
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+            playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + playerWinStreak.ToString();
+            pcStreak.Text = resourceLoader.GetString("My streak") + ": " + pcWinStreak.ToString();
         }
     }
 }

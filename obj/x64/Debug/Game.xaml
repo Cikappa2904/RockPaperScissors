@@ -94,9 +94,9 @@
 
         <StackPanel x:ConnectionId='5' x:Name="stackPanel" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Margin="0.4,0,0,0" >
             <muxc:RadioButtons x:ConnectionId='7' x:Name="playerMove_RadioButtons" SelectedIndex="2"                                       Margin="10,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <RadioButton x:ConnectionId='16' x:Name="radioButton" Content="Rock" Margin="0,0,0,0"/>
-                <RadioButton x:ConnectionId='17' x:Name="radioButton1" Content="Paper" Margin="0,0,0,0" HorizontalAlignment="Center"/>
-                <RadioButton x:ConnectionId='18' x:Name="radioButton2" Content="Scissors" Margin="0,0,0,0" HorizontalAlignment="Center"/>
+                <RadioButton x:ConnectionId='16' x:Name="rockRadioButton" Content="Rock" Margin="0,0,0,0"/>
+                <RadioButton x:ConnectionId='17' x:Name="paperRadioButton" Content="Paper" Margin="0,0,0,0" HorizontalAlignment="Center"/>
+                <RadioButton x:ConnectionId='18' x:Name="scissorsRadioButton" Content="Scissors" Margin="0,0,0,0" HorizontalAlignment="Center"/>
             </muxc:RadioButtons>
 
             <StackPanel Orientation="Vertical">

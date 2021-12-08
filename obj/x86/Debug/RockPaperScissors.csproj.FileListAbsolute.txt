@@ -49,3 +49,4 @@ D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\x86\Debug\quali
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\x86\Debug\ProjectArchitectures.txt
 D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\Core\ForBundle\AppxManifest.xml

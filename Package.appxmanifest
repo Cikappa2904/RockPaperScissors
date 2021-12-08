@@ -9,7 +9,7 @@
   <Identity
     Name="37873c79-04f8-499a-b46b-ea6495eecdb8"
     Publisher="CN=cikap"
-    Version="1.0.0.0" />
+    Version="0.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="37873c79-04f8-499a-b46b-ea6495eecdb8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
