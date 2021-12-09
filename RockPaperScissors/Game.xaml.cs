@@ -48,18 +48,15 @@ namespace RockPaperScissors
                 localSettings.Values["pcStreak"] = 0;
             }
 
-            
+            if (!IsWindows11())
+            {
+                movesEmojis[0] = "✊";
+            }
+
 
 
             rockRadioButton.Content = resourceLoader.GetString("Rock");
-            if(IsWindows11())
-            {
-                rockRadioButton.Content = "Windows11";
-            }
-            else
-            {
-                rockRadioButton.Content = "Windows10";
-            }
+            
             paperRadioButton.Content = resourceLoader.GetString("Paper");
             scissorsRadioButton.Content = resourceLoader.GetString("Scissors");
             showComputerThought.Text = resourceLoader.GetString("I'm thinking");
@@ -106,7 +103,7 @@ namespace RockPaperScissors
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-            showComputerThought.Text = resourceLoader.GetString("I'm thinking") + "...";
+            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
             Random randNumber = new Random();
             int x = 0;
             for (int i = 0; i < 15; i++)
@@ -198,10 +195,14 @@ namespace RockPaperScissors
             var v = Int64.Parse(Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamilyVersion);
             var build = (v & 0x00000000FFFF0000) >> 16;
 
-            if (build == 22000)
+            if (build >= 22000)
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
     }
 }
