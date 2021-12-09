@@ -6,9 +6,9 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\resources.pri">
+  <index root="\" startIndexAt="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\resources.pri">
     <default>
-      <qualifier name="Language" value="it-IT" />
+      <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
       <qualifier name="Scale" value="200" />
       <qualifier name="HomeRegion" value="001" />

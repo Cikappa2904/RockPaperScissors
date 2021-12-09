@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-it"
+"ResourceDimensions"		"language-it-it"
+
+[Files]
+"D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\split.language-it.pri"			"resources.pri"

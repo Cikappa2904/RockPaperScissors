@@ -48,8 +48,18 @@ namespace RockPaperScissors
                 localSettings.Values["pcStreak"] = 0;
             }
 
+            
+
 
             rockRadioButton.Content = resourceLoader.GetString("Rock");
+            if(IsWindows11())
+            {
+                rockRadioButton.Content = "Windows11";
+            }
+            else
+            {
+                rockRadioButton.Content = "Windows10";
+            }
             paperRadioButton.Content = resourceLoader.GetString("Paper");
             scissorsRadioButton.Content = resourceLoader.GetString("Scissors");
             showComputerThought.Text = resourceLoader.GetString("I'm thinking");
@@ -181,6 +191,17 @@ namespace RockPaperScissors
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + playerWinStreak.ToString();
             pcStreak.Text = resourceLoader.GetString("My streak") + ": " + pcWinStreak.ToString();
+        }
+
+        public bool IsWindows11()
+        {
+            var v = Int64.Parse(Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamilyVersion);
+            var build = (v & 0x00000000FFFF0000) >> 16;
+
+            if (build == 22000)
+                return true;
+            else
+                return false;
         }
     }
 }

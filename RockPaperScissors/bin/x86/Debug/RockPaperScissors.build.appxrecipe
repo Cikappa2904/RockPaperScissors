@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>37873c79-04f8-499a-b46b-ea6495eecdb8</PackageIdentityName>
     <PackageIdentityPublisher>CN=cikap</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors.exe">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors.exe">
       <PackagePath>entrypoint\RockPaperScissors.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,37 +34,37 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors.xr.xml">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors.xr.xml">
       <PackagePath>RockPaperScissors.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
@@ -73,10 +73,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\bin\x86\Debug\Core\RockPaperScissors.exe">
+    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\Core\RockPaperScissors.exe">
       <PackagePath>RockPaperScissors.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">

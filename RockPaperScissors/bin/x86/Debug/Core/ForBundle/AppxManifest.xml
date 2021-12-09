@@ -7,7 +7,7 @@
 
     Per ulteriori informazioni sui file manifesto di pacchetto, vedere http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="37873c79-04f8-499a-b46b-ea6495eecdb8" Publisher="CN=cikap" Version="0.2.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="37873c79-04f8-499a-b46b-ea6495eecdb8" Publisher="CN=cikap" Version="0.2.1.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="37873c79-04f8-499a-b46b-ea6495eecdb8" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>RockPaperScissors</DisplayName>
@@ -22,6 +22,7 @@
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.30035.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
+    <Resource Language="EN-US" />
     <Resource Language="IT-IT" />
     <Resource uap:Scale="100" />
     <Resource uap:Scale="120" />

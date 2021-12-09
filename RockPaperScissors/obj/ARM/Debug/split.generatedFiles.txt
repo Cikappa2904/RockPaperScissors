@@ -1,2 +1,4 @@
 obj\ARM\Debug\split.pri
 obj\ARM\Debug\split.map.txt
+obj\ARM\Debug\split.language-it.pri
+obj\ARM\Debug\split.language-it.map.txt

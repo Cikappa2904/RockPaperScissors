@@ -1,1 +1,1 @@
-D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors.csproj;arm
+D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\RockPaperScissors.csproj;arm
