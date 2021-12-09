@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "638145dc-b3cf-4c8b-9b17-f61f9e410e70": {
+      "ProjectGuid": "638145dc-b3cf-4c8b-9b17-f61f9e410e70",
+      "DisplayName": "RockPaperScissors",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

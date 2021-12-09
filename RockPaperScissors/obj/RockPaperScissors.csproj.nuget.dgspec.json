@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {}
+    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {}
   },
   "projects": {
-    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {
+    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
+        "projectUniqueName": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
         "projectName": "RockPaperScissors",
-        "projectPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
+        "projectPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
         "packagesPath": "C:\\Users\\cikap\\.nuget\\packages\\",
-        "outputPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\obj\\",
+        "outputPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

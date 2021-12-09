@@ -25,7 +25,7 @@ namespace RockPaperScissors
     /// 
 
 
-    
+    //TODO: Pareggio carta
 
     public sealed partial class Game : Page
     {
@@ -37,15 +37,25 @@ namespace RockPaperScissors
         public Game()
         {
             this.InitializeComponent();
-            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView(); //Localization
+            Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings; //Local storage
+            if(localSettings.Values["playerStreak"]==null) //Initializing to 0 localstorage variables
+            {
+                localSettings.Values["playerStreak"] = 0;
+            }
+            if (localSettings.Values["pcStreak"] == null)
+            {
+                localSettings.Values["pcStreak"] = 0;
+            }
+
 
             rockRadioButton.Content = resourceLoader.GetString("Rock");
             paperRadioButton.Content = resourceLoader.GetString("Paper");
             scissorsRadioButton.Content = resourceLoader.GetString("Scissors");
             showComputerThought.Text = resourceLoader.GetString("I'm thinking");
             button.Content = resourceLoader.GetString("Play");
-            playerStreak.Text = resourceLoader.GetString("Your streak") + ": 0";
-            pcStreak.Text = resourceLoader.GetString("My streak") + ": 0";
+            playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + localSettings.Values["playerStreak"];
+            pcStreak.Text = resourceLoader.GetString("My streak") + ": " + localSettings.Values["pcStreak"];
 
         }
 
@@ -86,7 +96,7 @@ namespace RockPaperScissors
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-            showComputerThought.Text = "I'm thinking...";
+            showComputerThought.Text = resourceLoader.GetString("I'm thinking") + "...";
             Random randNumber = new Random();
             int x = 0;
             for (int i = 0; i < 15; i++)
@@ -129,7 +139,7 @@ namespace RockPaperScissors
                             playerWinStreak = 0;
                             break;
                         case 1:
-                            DisplayResultDialog(resourceLoader.GetString("Draw"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", it's a draw"));
+                            DisplayResultDialog(resourceLoader.GetString("Draw"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so it's a draw"));
                             break;
                         case 2:
                             DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you won"));
@@ -164,6 +174,10 @@ namespace RockPaperScissors
 
         private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["playerStreak"] = playerWinStreak.ToString();
+            localSettings.Values["pcStreak"] = pcWinStreak.ToString();
+
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + playerWinStreak.ToString();
             pcStreak.Text = resourceLoader.GetString("My streak") + ": " + pcWinStreak.ToString();
