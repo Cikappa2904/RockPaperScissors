@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -38,7 +40,31 @@ namespace RockPaperScissors
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
 
+            if (!IsWindows11()) //Set Acrylic background for Windows 10 since it doesn't support Mica (which is enabled in XAML)
+            {
+                
 
+                Windows.UI.Xaml.Media.AcrylicBrush myBrush = new Windows.UI.Xaml.Media.AcrylicBrush();
+                myBrush.BackgroundSource = Windows.UI.Xaml.Media.AcrylicBackgroundSource.HostBackdrop;
+                myBrush.TintOpacity = 0.6;
+
+                MainFrame.Background = myBrush;
+            }
+        }
+
+        public bool IsWindows11()
+        {
+            var v = Int64.Parse(Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamilyVersion);
+            var build = (v & 0x00000000FFFF0000) >> 16;
+
+            if (build >= 22000)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

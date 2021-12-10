@@ -7,6 +7,7 @@
     <RootType FullName="Microsoft.UI.Xaml.Controls.XamlControlsResources" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="ColumnDefinitions" />
@@ -92,6 +93,10 @@
       <RootMethod Name="GetApplyToRootOrPageBackground" />
       <RootMethod Name="SetApplyToRootOrPageBackground" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="RockPaperScissors.MainPage" />
   </Roots.RootTypes>
 </Roots>

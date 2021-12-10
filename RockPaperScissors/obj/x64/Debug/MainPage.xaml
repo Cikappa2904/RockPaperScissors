@@ -12,5 +12,13 @@
     <Grid>
         <Frame x:ConnectionId='2' x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
     </Grid>
+
+
+    <Page.Resources>
+        <SolidColorBrush x:ConnectionId='3' x:Name="MyBorderBrush" Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}"/>
+    </Page.Resources>
+
 </Page>
+
+<!--Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}-->
 

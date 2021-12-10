@@ -10,4 +10,9 @@
     <DeviceId>30f105c9-681e-420b-a277-7c086ead8a4e</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>DESKTOP-UR7D43U</RemoteDebugMachine>
+    <AuthenticationMode>None</AuthenticationMode>
+  </PropertyGroup>
 </Project>

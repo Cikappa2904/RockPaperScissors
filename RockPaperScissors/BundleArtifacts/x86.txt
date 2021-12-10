@@ -1,2 +1,2 @@
-MainPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors_0.2.1.0_x86_Debug.msix
-SymbolPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x86\Debug\Symbols\RockPaperScissors_0.2.1.0_x86_Debug.appxsym
+MainPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x86\Debug\RockPaperScissors_0.2.3.0_x86_Debug.msix
+SymbolPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x86\Debug\Symbols\RockPaperScissors_0.2.3.0_x86_Debug.appxsym

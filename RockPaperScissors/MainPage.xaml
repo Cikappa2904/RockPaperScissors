@@ -12,4 +12,12 @@
     <Grid>
         <Frame x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
     </Grid>
+
+
+    <Page.Resources>
+        <SolidColorBrush x:Name="MyBorderBrush" Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}"/>
+    </Page.Resources>
+
 </Page>
+
+<!--Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}-->

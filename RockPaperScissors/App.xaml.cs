@@ -97,5 +97,7 @@ namespace RockPaperScissors
             //TODO: salvare lo stato dell'applicazione e arrestare eventuali attività eseguite in background
             deferral.Complete();
         }
+
+
     }
 }

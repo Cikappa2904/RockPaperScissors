@@ -75,7 +75,14 @@ namespace RockPaperScissors
             switch (playerMove)
             {
                 case 0: //Rock
-                    showPlayerMove.Text = "🪨";
+                    if(IsWindows11())
+                    {
+                        showPlayerMove.Text = "🪨";
+                    }
+                    else
+                    {
+                        showPlayerMove.Text = "✊";
+                    }
                     break;
                 case 1: //Paper
                     showPlayerMove.Text = "📄";
