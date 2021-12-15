@@ -11,7 +11,7 @@
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <RemoteDebugMachine>DESKTOP-UR7D43U</RemoteDebugMachine>
     <AuthenticationMode>None</AuthenticationMode>
   </PropertyGroup>

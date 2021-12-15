@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,18 +29,19 @@ namespace RockPaperScissors
 
     //TODO: Pareggio carta
 
-    public sealed partial class Game : Page
+    public sealed partial class MultiPlayer : Page
     {
 
         string[] movesEmojis = new string[3] { "🪨", "📄", "✂️" };
         string[] movesText = new string[3] { "Rock", "Paper", "Scissors" };
         int playerWinStreak = 0, pcWinStreak = 0;
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings; //Local storage
 
-        public Game()
+
+        public MultiPlayer()
         {
             this.InitializeComponent();
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView(); //Localization
-            Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings; //Local storage
             if(localSettings.Values["playerStreak"]==null) //Initializing to 0 localstorage variables
             {
                 localSettings.Values["playerStreak"] = 0;
@@ -109,6 +112,152 @@ namespace RockPaperScissors
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            if(localSettings.Values["multiplayerSettings"].ToString() == "server")
+            {
+                TcpListener server = null;
+                try
+                {
+                    // Set the TcpListener on port 13000.
+                    Int32 port = 48765;
+                    IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+
+                    // TcpListener server = new TcpListener(port);
+                    server = new TcpListener(localAddr, port);
+
+                    // Start listening for client requests.
+                    server.Start();
+
+                    // Buffer for reading data
+                    Byte[] bytes = new Byte[256];
+                    String data = null;
+
+                    // Enter the listening loop.
+                    while (true)
+                    {
+                        Console.Write("Waiting for a connection... ");
+
+                        // Perform a blocking call to accept requests.
+                        // You could also use server.AcceptSocket() here.
+                        TcpClient client = server.AcceptTcpClient();
+                        Console.WriteLine("Connected!");
+
+                        data = null;
+
+                        // Get a stream object for reading and writing
+                        NetworkStream stream = client.GetStream();
+
+                        int i;
+
+                        // Loop to receive all the data sent by the client.
+                        while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+                        {
+                            // Translate data bytes to a ASCII string.
+                            data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+                            playerStreak.Text = data;
+
+                            // Process the data sent by the client.
+                            data = data.ToUpper();
+
+                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
+
+                            // Send back a response.
+                            stream.Write(msg, 0, msg.Length);
+                            Console.WriteLine("Sent: {0}", data);
+                        }
+
+                        // Shutdown and end connection
+                        client.Close();
+                    }
+                }
+                catch (SocketException f)
+                {
+                    Console.WriteLine("SocketException: {0}", f);
+                }
+                finally
+                {
+                    // Stop listening for new clients.
+                    server.Stop();
+                }
+
+                Console.WriteLine("\nHit enter to continue...");
+                Console.Read();
+            }
+            else
+            {
+                try
+                {
+                    // Create a TcpClient.
+                    // Note, for this client to work you need to have a TcpServer
+                    // connected to the same address as specified by the server, port
+                    // combination.
+                    Int32 port = 48765;
+                    /*string server = localSettings.Values["ipAddress"].ToString();
+                    TcpClient client = new TcpClient(server, port);*/
+
+                    IPAddress server = IPAddress.Parse(localSettings.Values["ipAddress"].ToString());
+                    IPEndPoint ipLocalEndPoint = new IPEndPoint(server, port);
+                    TcpClient client = new TcpClient(ipLocalEndPoint);
+
+                    string message = "";
+
+                    switch(playerMove_RadioButtons.SelectedIndex)
+                    {
+                        case 0:
+                            message = "Rock";
+                            break;
+                        case 1:
+                            message = "Paper";
+                            break;
+                        case 2:
+                            message = "Scissors";
+                            break;
+                    }
+
+                    // Translate the passed message into ASCII and store it as a Byte array.
+                    Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+
+                    // Get a client stream for reading and writing.
+                    //  Stream stream = client.GetStream();
+
+                    NetworkStream stream = client.GetStream();
+
+                    // Send the message to the connected TcpServer.
+                    stream.Write(data, 0, data.Length);
+
+                    Console.WriteLine("Sent: {0}", message);
+
+                    // Receive the TcpServer.response.
+
+                    // Buffer to store the response bytes.
+                    data = new Byte[256];
+
+                    // String to store the response ASCII representation.
+                    String responseData = String.Empty;
+
+                    // Read the first batch of the TcpServer response bytes.
+                    Int32 bytes = stream.Read(data, 0, data.Length);
+                    responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                    Console.WriteLine("Received: {0}", responseData);
+
+                    // Close everything.
+                    stream.Close();
+                    client.Close();
+                }
+                catch (ArgumentNullException f)
+                {
+                    Console.WriteLine("ArgumentNullException: {0}", f);
+                }
+                catch (SocketException f)
+                {
+                    Console.WriteLine("SocketException: {0}", f);
+                }
+
+                Console.WriteLine("\n Press Enter to continue...");
+                Console.Read();
+            }
+
+
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             showComputerThought.Text = resourceLoader.GetString("I'm thinking");
             Random randNumber = new Random();

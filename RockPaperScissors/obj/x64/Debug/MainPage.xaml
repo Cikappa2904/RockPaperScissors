@@ -10,12 +10,24 @@
 
 
     <Grid>
-        <Frame x:ConnectionId='2' x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+        <muxc:NavigationView x:ConnectionId='2' IsBackEnabled="False" IsSettingsVisible="True" PaneDisplayMode="LeftMinimal" IsBackButtonVisible="Collapsed" IsTitleBarAutoPaddingEnabled="False"                                    >
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem
+                    Content="SinglePlayer"
+                    IsTabStop="False"
+                    Tag="SinglePlayer" />
+                <muxc:NavigationViewItem
+                    Content="MultiPlayer"
+                    IsTabStop="False"
+                    Tag="MultiPlayer" />
+            </muxc:NavigationView.MenuItems>
+            <Frame x:ConnectionId='3' x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+        </muxc:NavigationView>
     </Grid>
 
 
     <Page.Resources>
-        <SolidColorBrush x:ConnectionId='3' x:Name="MyBorderBrush" Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}"/>
+        <SolidColorBrush x:ConnectionId='4' x:Name="MyBorderBrush" Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}"/>
     </Page.Resources>
 
 </Page>

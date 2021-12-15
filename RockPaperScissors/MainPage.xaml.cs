@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MUXC = Microsoft.UI.Xaml.Controls;
 
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x410
 
@@ -36,7 +37,7 @@ namespace RockPaperScissors
             view.TitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
             view.TitleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
 
-            MainFrame.Navigate(typeof(Game));
+            MainFrame.Navigate(typeof(SinglePlayer));
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
 
@@ -64,6 +65,28 @@ namespace RockPaperScissors
             else
             {
                 return false;
+            }
+        }
+
+        private void SelectionChanged(MUXC.NavigationView sender, MUXC.NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args.IsSettingsSelected)
+            {
+                MainFrame.Navigate(typeof(Settings));
+            }
+            else
+            {
+                MUXC.NavigationViewItem item = args.SelectedItem as MUXC.NavigationViewItem;
+
+                switch (item.Tag.ToString()) //This is a switch with just one case; it's here to be used if I want to add another page
+                {
+                    case "SinglePlayer":
+                        MainFrame.Navigate(typeof(SinglePlayer));
+                        break;
+                    case "MultiPlayer":
+                        MainFrame.Navigate(typeof(MultiPlayer));
+                        break;
+                }
             }
         }
 

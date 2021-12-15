@@ -10,7 +10,19 @@
 
 
     <Grid>
-        <Frame x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+        <muxc:NavigationView IsBackEnabled="False" IsSettingsVisible="True" PaneDisplayMode="LeftMinimal" IsBackButtonVisible="Collapsed" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="SelectionChanged">
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem
+                    Content="SinglePlayer"
+                    IsTabStop="False"
+                    Tag="SinglePlayer" />
+                <muxc:NavigationViewItem
+                    Content="MultiPlayer"
+                    IsTabStop="False"
+                    Tag="MultiPlayer" />
+            </muxc:NavigationView.MenuItems>
+            <Frame x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+        </muxc:NavigationView>
     </Grid>
 
 
