@@ -23,12 +23,6 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,40,0,0">
             <TextBlock Text="Multiplayer settings" FontSize="14" FontWeight="Bold"></TextBlock>
-
-            <muxc:RadioButtons x:Name="clientOrServer" SelectedIndex="1" MaxColumns="3" SelectionChanged="MultiplayerSettings_Changed">
-                <x:String>Client</x:String>
-                <x:String>Server</x:String>
-            </muxc:RadioButtons>
-            
             <TextBox x:Name="serverIP"></TextBox>
             <Button x:Name="confirmIP" Click="Button_Click"></Button>
         </StackPanel>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
@@ -110,26 +111,58 @@ namespace RockPaperScissors
 
             ContentDialogResult result = await ContentDialog1.ShowAsync();
         }
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        { 
 
-            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
-            Random randNumber = new Random();
-            int x = 0;
-            for (int i = 0; i < 15; i++)
+        async static Task<string> HttpGetAsync(string uri)
+        {
+            string content = "";
+            var client = new HttpClient();
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
             {
-                await Task.Delay(100);
-                x = randNumber.Next(3);
-                showComputerMove.Text = movesEmojis[x];
+                content = await response.Content.ReadAsStringAsync();
             }
 
-            showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
+            return content;
+        }
 
-            switch(x)
+        async static Task<string> HttpPostAsync(string uri, string line)
+        {
+            var client = new HttpClient();
+
+            var values = new Dictionary<string, string>
+            {
+                { "thing1", line },
+            };
+
+            var content = new FormUrlEncodedContent(values);
+
+            var response = await client.PostAsync(uri, content);
+
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            return responseString;
+        }
+
+        async Task PlayGame(string get_request, int player_move)
+        {
+            string opponent_move = " ";
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
+            while (true)
+            {
+                opponent_move = HttpGetAsync(get_request).ToString();
+                if(opponent_move != "-1")
+                {
+                    break;
+                }
+            }
+
+            int x = int.Parse(opponent_move);
+
+            switch (x)
             {
                 case 0:
-                    switch(playerMove_RadioButtons.SelectedIndex)
+                    switch (player_move)
                     {
 
                         case 0:
@@ -149,7 +182,7 @@ namespace RockPaperScissors
                     }
                     break;
                 case 1:
-                    switch (playerMove_RadioButtons.SelectedIndex)
+                    switch (player_move)
                     {
                         case 0:
                             DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you lost"));
@@ -187,6 +220,31 @@ namespace RockPaperScissors
                     }
                     break;
             }
+
+        }
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        { 
+
+
+
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
+
+            string post_request = localSettings.Values["ipAddress"].ToString() + "/send_result";
+            string get_request = localSettings.Values["ipAddress"].ToString() + "/get_result";
+
+
+            await HttpPostAsync(post_request, playerMove_RadioButtons.SelectedIndex.ToString());
+
+            int playerMove = playerMove_RadioButtons.SelectedIndex;
+
+            await PlayGame(get_request, playerMove);
+
+
+
+            showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
+
+            
             
         }
 
@@ -216,4 +274,6 @@ namespace RockPaperScissors
             }
         }
     }
+
+
 }

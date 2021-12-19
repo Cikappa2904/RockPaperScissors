@@ -28,20 +28,7 @@ namespace RockPaperScissors
         {
             this.InitializeComponent();
         }
-        private void MultiplayerSettings_Changed(object sender, SelectionChangedEventArgs e)
-        {
-            if(clientOrServer.SelectedIndex == 0)
-            {
-                serverIP.IsEnabled = true;
-                localSettings.Values["multiplayerSettings"] = "client";
 
-            }
-            else
-            {
-                serverIP.IsEnabled = false;
-                localSettings.Values["multiplayerSettings"] = "server";
-            }
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
