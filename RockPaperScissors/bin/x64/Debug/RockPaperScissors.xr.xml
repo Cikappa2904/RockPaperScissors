@@ -59,7 +59,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Items" />
-      <RootProperty Name="MaxColumns" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -117,7 +116,6 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="RockPaperScissors.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox" />
-    <RootType FullName="System.String" />
     <RootType FullName="RockPaperScissors.Settings" />
   </Roots.RootTypes>
 </Roots>

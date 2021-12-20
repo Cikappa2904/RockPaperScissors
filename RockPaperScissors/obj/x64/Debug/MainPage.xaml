@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="RockPaperScissors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RockPaperScissors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
+
+
+    <Grid>
+        <muxc:NavigationView x:ConnectionId='2' IsBackEnabled="False" IsSettingsVisible="True" PaneDisplayMode="LeftMinimal" IsBackButtonVisible="Collapsed" IsTitleBarAutoPaddingEnabled="False"                                    >
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem
+                    Content="SinglePlayer"
+                    IsTabStop="False"
+                    Tag="SinglePlayer" />
+                <muxc:NavigationViewItem
+                    Content="MultiPlayer"
+                    IsTabStop="False"
+                    Tag="MultiPlayer" />
+            </muxc:NavigationView.MenuItems>
+            <Frame x:ConnectionId='3' x:Name="MainFrame" Margin="0,0,0,0" muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"/>
+        </muxc:NavigationView>
+    </Grid>
+
+
+    <Page.Resources>
+        <SolidColorBrush x:ConnectionId='4' x:Name="MyBorderBrush" Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}"/>
+    </Page.Resources>
+
+</Page>
+
+<!--Color="{ThemeResource AcrylicInAppFillColorDefaultBrush}-->
+

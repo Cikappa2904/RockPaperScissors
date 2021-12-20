@@ -125,13 +125,13 @@ namespace RockPaperScissors
             return content;
         }
 
-        async static Task<string> HttpPostAsync(string uri, string line)
+        async static Task<string> HttpPostAsync(string uri, string line, string key)
         {
             var client = new HttpClient();
 
             var values = new Dictionary<string, string>
             {
-                { "thing1", line },
+                { key, line },
             };
 
             var content = new FormUrlEncodedContent(values);
@@ -143,25 +143,26 @@ namespace RockPaperScissors
             return responseString;
         }
 
-        async Task PlayGame(string get_request, int player_move)
-        {
-            string opponent_move = " ";
+        async Task PlayGame(string get_request, int player_move, string whoami)
+        { 
+
+            string opponent_move = "-1";
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
 
             while (true)
             {
-                opponent_move = HttpGetAsync(get_request).ToString();
+                opponent_move = await HttpPostAsync(get_request, whoami, "player_number");
                 if(opponent_move != "-1")
                 {
                     break;
                 }
             }
 
-            int x = int.Parse(opponent_move);
+            //int x = int.Parse(opponent_move);
 
-            switch (x)
+            switch (opponent_move)
             {
-                case 0:
+                case "0":
                     switch (player_move)
                     {
 
@@ -181,7 +182,7 @@ namespace RockPaperScissors
 
                     }
                     break;
-                case 1:
+                case "1":
                     switch (player_move)
                     {
                         case 0:
@@ -200,7 +201,7 @@ namespace RockPaperScissors
 
                     }
                     break;
-                case 2:
+                case "2":
                     switch (playerMove_RadioButtons.SelectedIndex)
                     {
                         case 0:
@@ -221,6 +222,9 @@ namespace RockPaperScissors
                     break;
             }
 
+            //int x = int.Parse(opponent_move);
+            //showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
+
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
         { 
@@ -233,19 +237,16 @@ namespace RockPaperScissors
             string post_request = localSettings.Values["ipAddress"].ToString() + "/send_result";
             string get_request = localSettings.Values["ipAddress"].ToString() + "/get_result";
 
+            string whoami = await HttpPostAsync(post_request, playerMove_RadioButtons.SelectedIndex.ToString(), "move");
 
-            await HttpPostAsync(post_request, playerMove_RadioButtons.SelectedIndex.ToString());
+            //button.Content = whoami;
+
 
             int playerMove = playerMove_RadioButtons.SelectedIndex;
 
-            await PlayGame(get_request, playerMove);
+            PlayGame(get_request, playerMove, whoami);
 
-
-
-            showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
-
-            
-            
+ 
         }
 
         private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
