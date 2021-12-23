@@ -1,1 +1,1 @@
-D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\AppPackages\RockPaperScissors_0.2.3.0_Debug_Test\RockPaperScissors_0.2.3.0_x86_x64_arm_Debug.msixbundle
+C:\Users\cikap\Desktop\package\RockPaperScissors_0.2.3.0_Debug_Test\RockPaperScissors_0.2.3.0_x86_x64_arm_Debug.msixbundle

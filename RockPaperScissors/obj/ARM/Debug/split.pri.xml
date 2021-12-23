@@ -13,12 +13,12 @@
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
-			<NamedResource name="Game.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/Game.xbf">
+			<NamedResource name="MainPage.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/MainPage.xbf">
 				<Candidate type="EmbeddedData">
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
-			<NamedResource name="MainPage.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/MainPage.xbf">
+			<NamedResource name="MultiPlayer.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/MultiPlayer.xbf">
 				<Candidate type="EmbeddedData">
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
@@ -26,6 +26,16 @@
 			<NamedResource name="RockPaperScissors.xr.xml" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/RockPaperScissors.xr.xml">
 				<Candidate type="Path">
 					<Value>RockPaperScissors.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Settings.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/Settings.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SinglePlayer.xbf" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Files/SinglePlayer.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
 			<ResourceMapSubtree name="Assets">
@@ -151,6 +161,11 @@
 			<NamedResource name="Streak" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Streak">
 				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
 					<Value>Streak</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Title" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Title">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Rock Paper Scissors</Value>
 				</Candidate>
 			</NamedResource>
 			<NamedResource name="Victory" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Victory">

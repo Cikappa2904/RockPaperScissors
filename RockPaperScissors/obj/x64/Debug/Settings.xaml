@@ -23,9 +23,12 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,40,0,0">
             <TextBlock Text="Multiplayer settings" FontSize="14" FontWeight="Bold"></TextBlock>
-            <TextBox x:ConnectionId='2' x:Name="serverIP"></TextBox>
-            <Button x:ConnectionId='3' x:Name="confirmIP"                     ></Button>
+            <TextBox x:ConnectionId='3' x:Name="serverIP"></TextBox>
+            <Button x:ConnectionId='4' x:Name="confirmIP"                     ></Button>
         </StackPanel>
+
+        <ContentDialog x:ConnectionId='2' x:Name="ContentDialog1"/>
+
 
     </Grid>
 </Page>

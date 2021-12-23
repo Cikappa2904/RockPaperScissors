@@ -27,5 +27,8 @@
             <Button x:Name="confirmIP" Click="Button_Click"></Button>
         </StackPanel>
 
+        <ContentDialog x:Name="ContentDialog1"/>
+
+
     </Grid>
 </Page>
