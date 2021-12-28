@@ -126,8 +126,14 @@
   <data name=", so you won" xml:space="preserve">
     <value>, so you won</value>
   </data>
+  <data name="confirmButton.Content" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
   <data name="Draw" xml:space="preserve">
     <value>Draw</value>
+  </data>
+  <data name="Enemy Streak" xml:space="preserve">
+    <value>Enemy streak</value>
   </data>
   <data name="I chose" xml:space="preserve">
     <value>I chose</value>
@@ -135,8 +141,14 @@
   <data name="I'm thinking" xml:space="preserve">
     <value>I'm thinking...</value>
   </data>
+  <data name="Invalid IP" xml:space="preserve">
+    <value>Invalid IP</value>
+  </data>
   <data name="Lost" xml:space="preserve">
     <value>Lost</value>
+  </data>
+  <data name="multiplayerSettings.Text" xml:space="preserve">
+    <value>Multiplayer settings</value>
   </data>
   <data name="My streak" xml:space="preserve">
     <value>My streak</value>
@@ -156,11 +168,17 @@
   <data name="Streak" xml:space="preserve">
     <value>Streak</value>
   </data>
+  <data name="The IP is not valid" xml:space="preserve">
+    <value>The IP address you inserted is not a valid IP address.</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Rock Paper Scissors</value>
   </data>
   <data name="Victory" xml:space="preserve">
     <value>Victory</value>
+  </data>
+  <data name="waitingOpponent.Text" xml:space="preserve">
+    <value>Waiting for the opponent...</value>
   </data>
   <data name="Your streak" xml:space="preserve">
     <value>Your streak</value>

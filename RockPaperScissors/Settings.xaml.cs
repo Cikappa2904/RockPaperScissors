@@ -45,6 +45,8 @@ namespace RockPaperScissors
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView(); //Localization
+
             Regex ipRegex = new Regex("([0-9]{1,3}(?:\\.[0-9]{1,3}){3}|[a-zA-Z]+):([0-9]{1,5})"); //regex stolen from https://stackoverflow.com/questions/57288837/regex-if-valid-websocket-address 
             if (ipRegex.IsMatch(serverIP.Text))
             {
@@ -52,7 +54,9 @@ namespace RockPaperScissors
             }
             else
             {
-                DisplayResultDialog("not valid IP", "The IP you inserted is not valid");
+                
+
+                DisplayResultDialog(resourceLoader.GetString("Invalid IP"), resourceLoader.GetString("The IP is not valid"));
             }
             
 

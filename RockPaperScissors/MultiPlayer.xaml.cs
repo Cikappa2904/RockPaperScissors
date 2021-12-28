@@ -35,7 +35,7 @@ namespace RockPaperScissors
 
         string[] movesEmojis = new string[3] { "🪨", "📄", "✂️" };
         string[] movesText = new string[3] { "Rock", "Paper", "Scissors" };
-        int playerWinStreak = 0, pcWinStreak = 0;
+        int playerWinStreak = 0, enemyWinStreak = 0;
         Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings; //Local storage
 
 
@@ -43,13 +43,13 @@ namespace RockPaperScissors
         {
             this.InitializeComponent();
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView(); //Localization
-            if(localSettings.Values["playerStreak"]==null) //Initializing to 0 localstorage variables
+            if(localSettings.Values["playerStreakMultiplayer"]==null) //Initializing to 0 localstorage variables
             {
-                localSettings.Values["playerStreak"] = 0;
+                localSettings.Values["playerStreakMultiplayer"] = 0;
             }
-            if (localSettings.Values["pcStreak"] == null)
+            if (localSettings.Values["pcStreakMultiplayer"] == null)
             {
-                localSettings.Values["pcStreak"] = 0;
+                localSettings.Values["pcStreakMultiplayer"] = 0;
             }
 
             if (!IsWindows11())
@@ -63,10 +63,10 @@ namespace RockPaperScissors
             
             paperRadioButton.Content = resourceLoader.GetString("Paper");
             scissorsRadioButton.Content = resourceLoader.GetString("Scissors");
-            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
+            //showComputerThought.Text = resourceLoader.GetString("I'm thinking");
             button.Content = resourceLoader.GetString("Play");
-            playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + localSettings.Values["playerStreak"];
-            pcStreak.Text = resourceLoader.GetString("My streak") + ": " + localSettings.Values["pcStreak"];
+            playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + localSettings.Values["playerStreakMultiplayer"];
+            enemyStreak.Text = resourceLoader.GetString("Enemy Streak") + ": " + localSettings.Values["pcStreakMultiplayer"];
 
         }
 
@@ -112,6 +112,18 @@ namespace RockPaperScissors
             ContentDialogResult result = await ContentDialog1.ShowAsync();
         }
 
+
+        private async void DisplayErrorDialog(string title, string content)
+        {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
+            ContentDialog1.Title = title;
+            ContentDialog1.Content = content;
+            ContentDialog1.CloseButtonText = "Ok";
+            ContentDialog1.DefaultButton = ContentDialogButton.Close;
+
+            ContentDialogResult result = await ContentDialog1.ShowAsync();
+        }
         async static Task<string> HttpGetAsync(string uri)
         {
             string content = "";
@@ -136,11 +148,26 @@ namespace RockPaperScissors
 
             var content = new FormUrlEncodedContent(values);
 
-            var response = await client.PostAsync(uri, content);
+            try
+            {
+                var response = await client.PostAsync(uri, content);
 
-            var responseString = await response.Content.ReadAsStringAsync();
+                var responseString = await response.Content.ReadAsStringAsync();
 
-            return responseString;
+                return responseString;
+
+
+            }
+            catch (HttpRequestException e)
+            {
+
+                return "Request error";
+
+            }
+
+
+
+
         }
 
         async Task PlayGame(string get_request, int player_move, string whoami)
@@ -151,14 +178,21 @@ namespace RockPaperScissors
 
             while (true)
             {
+                await Task.Delay(100);
                 opponent_move = await HttpPostAsync(get_request, whoami, "player_number");
+                if(opponent_move == "Request error")
+                {
+                    DisplayErrorDialog("An error occurred", "An error occurred while trying to connect to the server");
+                    return;
+                }
+
                 if(opponent_move != "-1")
                 {
                     break;
                 }
-            }
 
-            //int x = int.Parse(opponent_move);
+
+            }
 
             switch (opponent_move)
             {
@@ -171,13 +205,13 @@ namespace RockPaperScissors
                             break;
                         case 1:
                             DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Rock", resourceLoader.GetString(", so you won"));
-                            pcWinStreak = 0;
+                            enemyWinStreak = 0;
                             playerWinStreak++;
                             break;
                         case 2:
                             DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Rock", resourceLoader.GetString(", so you lost"));
                             playerWinStreak = 0;
-                            pcWinStreak++;
+                            enemyWinStreak++;
                             break;
 
                     }
@@ -187,7 +221,7 @@ namespace RockPaperScissors
                     {
                         case 0:
                             DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you lost"));
-                            pcWinStreak++;
+                            enemyWinStreak++;
                             playerWinStreak = 0;
                             break;
                         case 1:
@@ -195,7 +229,7 @@ namespace RockPaperScissors
                             break;
                         case 2:
                             DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Paper", resourceLoader.GetString(", so you won"));
-                            pcWinStreak = 0;
+                            enemyWinStreak = 0;
                             playerWinStreak++;
                             break;
 
@@ -207,11 +241,11 @@ namespace RockPaperScissors
                         case 0:
                             DisplayResultDialog(resourceLoader.GetString("Victory"), resourceLoader.GetString("I chose"), "Scissors", resourceLoader.GetString(", so you won"));
                             playerWinStreak++;
-                            pcWinStreak = 0;
+                            enemyWinStreak = 0;
                             break;
                         case 1:
                             DisplayResultDialog(resourceLoader.GetString("Lost"), resourceLoader.GetString("I chose"), "Scissors", resourceLoader.GetString(", so you lost"));
-                            pcWinStreak++;
+                            enemyWinStreak++;
                             playerWinStreak = 0;
                             break;
                         case 2:
@@ -222,8 +256,12 @@ namespace RockPaperScissors
                     break;
             }
 
+
             //int x = int.Parse(opponent_move);
             //showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
+
+            enemyStreak.Text = enemyWinStreak.ToString();
+            playerStreak.Text = playerWinStreak.ToString();
 
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -232,32 +270,32 @@ namespace RockPaperScissors
 
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-            showComputerThought.Text = resourceLoader.GetString("I'm thinking");
-
-            string post_request = localSettings.Values["ipAddress"].ToString() + "/send_result";
-            string get_request = localSettings.Values["ipAddress"].ToString() + "/get_result";
+            
+            string post_request = "http://" + localSettings.Values["ipAddress"].ToString() + "/send_result";
+            string get_request = "http://" + localSettings.Values["ipAddress"].ToString() + "/get_result";
 
             string whoami = await HttpPostAsync(post_request, playerMove_RadioButtons.SelectedIndex.ToString(), "move");
 
-            //button.Content = whoami;
-
-
             int playerMove = playerMove_RadioButtons.SelectedIndex;
 
-            PlayGame(get_request, playerMove, whoami);
+            await PlayGame(get_request, playerMove, whoami);
 
  
         }
 
-        private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        private void GameContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            localSettings.Values["playerStreak"] = playerWinStreak.ToString();
-            localSettings.Values["pcStreak"] = pcWinStreak.ToString();
+            localSettings.Values["playerStreakMultiplayer"] = playerWinStreak.ToString();
+            localSettings.Values["enemyStreakMultiplayer"] = enemyWinStreak.ToString();
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + playerWinStreak.ToString();
-            pcStreak.Text = resourceLoader.GetString("My streak") + ": " + pcWinStreak.ToString();
+            enemyStreak.Text = resourceLoader.GetString("My streak") + ": " + enemyWinStreak.ToString();
+        }
+
+        private void ContentDialog_CloseButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
         }
 
         public bool IsWindows11()

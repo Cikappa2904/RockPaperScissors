@@ -126,8 +126,14 @@
   <data name=", so you won" xml:space="preserve">
     <value>, dunque hai vinto</value>
   </data>
+  <data name="confirmButton.Content" xml:space="preserve">
+    <value>Conferma</value>
+  </data>
   <data name="Draw" xml:space="preserve">
     <value>Pareggio</value>
+  </data>
+  <data name="Enemy Streak" xml:space="preserve">
+    <value>Record nemico</value>
   </data>
   <data name="I chose" xml:space="preserve">
     <value>Ho scelto</value>
@@ -135,8 +141,14 @@
   <data name="I'm thinking" xml:space="preserve">
     <value>Sto pensando...</value>
   </data>
+  <data name="Invalid IP" xml:space="preserve">
+    <value>IP non valido</value>
+  </data>
   <data name="Lost" xml:space="preserve">
     <value>Sconfitta</value>
+  </data>
+  <data name="multiplayerSettings.Text" xml:space="preserve">
+    <value>Impostazioni multigiocatore</value>
   </data>
   <data name="My streak" xml:space="preserve">
     <value>Il mio record</value>
@@ -156,11 +168,17 @@
   <data name="Streak" xml:space="preserve">
     <value>Record</value>
   </data>
+  <data name="The IP is not valid" xml:space="preserve">
+    <value>L'indirizzo IP che hai inserito non è un indirizzo IP valido.</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Sasso Carta Forbice</value>
   </data>
   <data name="Victory" xml:space="preserve">
     <value>Vittoria</value>
+  </data>
+  <data name="waitingOpponent.Text" xml:space="preserve">
+    <value>In attesa dell'avversario...</value>
   </data>
   <data name="Your streak" xml:space="preserve">
     <value>Il tuo record</value>

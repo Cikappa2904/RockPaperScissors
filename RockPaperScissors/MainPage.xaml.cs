@@ -36,6 +36,8 @@ namespace RockPaperScissors
             var view = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
             view.TitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
             view.TitleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
+            
+            
 
             MainFrame.Navigate(typeof(SinglePlayer));
 

@@ -111,10 +111,10 @@
                 <Border x:ConnectionId='10' x:Name="border1" BorderThickness="2" BorderBrush="Black" Width="67" Margin="0,0,0,0">
                     <TextBlock x:ConnectionId='12' x:Name="showComputerMove" Text="🤔" FontSize="48" VerticalAlignment="Center"></TextBlock>
                 </Border>
-                <TextBlock x:ConnectionId='11' x:Name="pcStreak" Text="Enemy streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
+                <TextBlock x:ConnectionId='11' x:Name="enemyStreak" Text="Enemy streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
             </StackPanel>
 
-            <TextBlock x:ConnectionId='9' x:Name="showComputerThought" Text="Waiting for opponent..." FontSize="18px" VerticalAlignment="Center" Margin="0,23.1,0,0"></TextBlock>
+            <TextBlock x:ConnectionId='9' x:Name="showComputerThought" Text="Waiting for opponent..." FontSize="18px" VerticalAlignment="Center" Margin="0,23.1,0,0" Visibility="Collapsed"></TextBlock>
 
         </StackPanel>
 

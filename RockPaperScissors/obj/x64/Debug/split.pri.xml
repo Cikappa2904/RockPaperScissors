@@ -118,6 +118,11 @@
 					<Value>Draw</Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="Enemy Streak" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Enemy Streak">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Enemy streak</Value>
+				</Candidate>
+			</NamedResource>
 			<NamedResource name="I chose" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/I chose">
 				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
 					<Value>I chose</Value>

@@ -7,7 +7,7 @@
 
     Per ulteriori informazioni sui file manifesto di pacchetto, vedere http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="37873c79-04f8-499a-b46b-ea6495eecdb8" Publisher="CN=cikap" Version="0.2.3.0" ProcessorArchitecture="x86" />
+  <Identity Name="37873c79-04f8-499a-b46b-ea6495eecdb8" Publisher="CN=cikap" Version="0.2.4.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="37873c79-04f8-499a-b46b-ea6495eecdb8" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>RockPaperScissors</DisplayName>
@@ -64,7 +64,7 @@
     <build:Item Name="VisualStudio" Version="17.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2022" />
     <build:Item Name="OperatingSystem" Version="10.0.22000.376 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.0.31822.380" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="17.0.31912.81" />
     <build:Item Name="ProjectGUID" Value="{638145DC-B3CF-4C8B-9B17-F61F9E410E70}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />

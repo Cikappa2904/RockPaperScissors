@@ -67,10 +67,10 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontWeight" />
     </RootType>
@@ -115,7 +115,9 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="RockPaperScissors.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="RockPaperScissors.Settings" />
   </Roots.RootTypes>
 </Roots>
