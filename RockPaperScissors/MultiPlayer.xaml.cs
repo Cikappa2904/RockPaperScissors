@@ -67,6 +67,7 @@ namespace RockPaperScissors
             button.Content = resourceLoader.GetString("Play");
             playerStreak.Text = resourceLoader.GetString("Your streak") + ": " + localSettings.Values["playerStreakMultiplayer"];
             enemyStreak.Text = resourceLoader.GetString("Enemy Streak") + ": " + localSettings.Values["pcStreakMultiplayer"];
+            addressIP.Text = "Server: " + localSettings.Values["ipAddress"].ToString();
 
         }
 
@@ -256,10 +257,6 @@ namespace RockPaperScissors
                     break;
             }
 
-
-            //int x = int.Parse(opponent_move);
-            //showComputerThought.Text = resourceLoader.GetString("I chose") + " " + resourceLoader.GetString(movesText[x]);
-
             enemyStreak.Text = enemyWinStreak.ToString();
             playerStreak.Text = playerWinStreak.ToString();
 
@@ -267,12 +264,12 @@ namespace RockPaperScissors
         private async void Button_Click(object sender, RoutedEventArgs e)
         { 
 
-
+            button.IsEnabled = false;
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             
             string post_request = "http://" + localSettings.Values["ipAddress"].ToString() + "/send_result";
-            string get_request = "http://" + localSettings.Values["ipAddress"].ToString() + "/get_result";
+            string get_request  = "http://" + localSettings.Values["ipAddress"].ToString() + "/get_result";
 
             string whoami = await HttpPostAsync(post_request, playerMove_RadioButtons.SelectedIndex.ToString(), "move");
 

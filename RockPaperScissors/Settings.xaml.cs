@@ -28,6 +28,7 @@ namespace RockPaperScissors
         public Settings()
         {
             this.InitializeComponent();
+            serverIP.Text = localSettings.Values["ipAddress"].ToString();
         }
 
         private async void DisplayResultDialog(string title, string content)

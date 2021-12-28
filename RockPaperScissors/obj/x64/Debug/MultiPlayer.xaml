@@ -10,8 +10,8 @@
 
     <Grid>
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Small">
+            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='3' x:Name="Small">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowHeight="500" MinWindowWidth="1"/>
                     </VisualState.StateTriggers>
@@ -40,7 +40,7 @@
                         <Setter Target="border1.(FrameworkElement.Width)" Value="91"/>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="Base">
+                <VisualState x:ConnectionId='4' x:Name="Base">
                     <VisualState.Setters>
                         <Setter Target="stackPanel.(StackPanel.Orientation)" Value="Horizontal"/>
                         <Setter Target="showPlayerMove.(TextBlock.FontSize)" Value="70"/>
@@ -92,38 +92,39 @@
 
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="addressIP" HorizontalAlignment="Right"></TextBlock>
-            <StackPanel x:Name="stackPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Margin="0.4,0,0,0" >
-                <muxc:RadioButtons x:Name="playerMove_RadioButtons" SelectedIndex="2" SelectionChanged="PlayerMove_Changed" Margin="10,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <RadioButton x:Name="rockRadioButton" Content="Rock" Margin="0,0,0,0"/>
-                    <RadioButton x:Name="paperRadioButton" Content="Paper" Margin="0,0,0,0" HorizontalAlignment="Center"/>
-                    <RadioButton x:Name="scissorsRadioButton" Content="Scissors" Margin="0,0,0,0" HorizontalAlignment="Center"/>
+            <TextBlock x:ConnectionId='7' x:Name="addressIP" HorizontalAlignment="Right"></TextBlock>
+            <StackPanel x:ConnectionId='8' x:Name="stackPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Margin="0.4,0,0,0" >
+                <muxc:RadioButtons x:ConnectionId='9' x:Name="playerMove_RadioButtons" SelectedIndex="2"                                       Margin="10,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <RadioButton x:ConnectionId='18' x:Name="rockRadioButton" Content="Rock" Margin="0,0,0,0"/>
+                    <RadioButton x:ConnectionId='19' x:Name="paperRadioButton" Content="Paper" Margin="0,0,0,0" HorizontalAlignment="Center"/>
+                    <RadioButton x:ConnectionId='20' x:Name="scissorsRadioButton" Content="Scissors" Margin="0,0,0,0" HorizontalAlignment="Center"/>
                 </muxc:RadioButtons>
 
                 <StackPanel Orientation="Vertical">
-                    <Border x:Name="border" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="52">
-                        <TextBlock x:Name="showPlayerMove" Text="✌️" FontSize="48"/>
+                    <Border x:ConnectionId='15' x:Name="border" BorderThickness="2" BorderBrush="Black" Margin="0,0,0,0" Width="52">
+                        <TextBlock x:ConnectionId='17' x:Name="showPlayerMove" Text="✌️" FontSize="48"/>
                     </Border>
-                    <TextBlock x:Name="playerStreak" Text="Your streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
+                    <TextBlock x:ConnectionId='16' x:Name="playerStreak" Text="Your streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
                 </StackPanel>
 
-                <Button x:Name="button" Margin="30,0,30,0" Click="Button_Click">Play</Button>
+                <Button x:ConnectionId='10' x:Name="button" Margin="30,0,30,0"                     >Play</Button>
                 <StackPanel Orientation="Vertical">
-                    <Border x:Name="border1" BorderThickness="2" BorderBrush="Black" Width="67" Margin="0,0,0,0">
-                        <TextBlock x:Name="showComputerMove" Text="🤔" FontSize="48" VerticalAlignment="Center"></TextBlock>
+                    <Border x:ConnectionId='12' x:Name="border1" BorderThickness="2" BorderBrush="Black" Width="67" Margin="0,0,0,0">
+                        <TextBlock x:ConnectionId='14' x:Name="showComputerMove" Text="🤔" FontSize="48" VerticalAlignment="Center"></TextBlock>
                     </Border>
-                    <TextBlock x:Name="enemyStreak" Text="Enemy streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
+                    <TextBlock x:ConnectionId='13' x:Name="enemyStreak" Text="Enemy streak: 0" FontSize="18px" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20"></TextBlock>
                 </StackPanel>
 
-                <TextBlock x:Name="showComputerThought" x:Uid="waitingOpponent" FontSize="18px" VerticalAlignment="Center" Margin="0,23.1,0,0"></TextBlock>
+                <TextBlock x:ConnectionId='11' x:Name="showComputerThought" x:Uid="waitingOpponent" FontSize="18px" VerticalAlignment="Center" Margin="0,23.1,0,0"></TextBlock>
 
             </StackPanel>
         </StackPanel>
 
-        <ContentDialog x:Name="ContentDialog1" CloseButtonClick="GameContentDialog_CloseButtonClick"/>
-        <ContentDialog x:Name="ContentDialog2" CloseButtonClick="ContentDialog_CloseButtonClick"/>
+        <ContentDialog x:ConnectionId='5' x:Name="ContentDialog1"                                                      />
+        <ContentDialog x:ConnectionId='6' x:Name="ContentDialog2"                                                  />
 
     </Grid>
 
 
 </Page>
+
