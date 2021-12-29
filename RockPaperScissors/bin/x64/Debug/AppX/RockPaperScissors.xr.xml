@@ -55,6 +55,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />

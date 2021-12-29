@@ -33,11 +33,10 @@ namespace RockPaperScissors
 
         private async void DisplayResultDialog(string title, string content)
         {
-            //var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-            //string tempContent = content + " " + resourceLoader.GetString(move) + content2;
-
-            ContentDialog1.Title = title;
-            ContentDialog1.Content = content;
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+            
+            ContentDialog1.Title = resourceLoader.GetString(title);
+            ContentDialog1.Content = resourceLoader.GetString(content);
             ContentDialog1.CloseButtonText = "Ok";
             ContentDialog1.DefaultButton = ContentDialogButton.Close;
 
@@ -57,7 +56,7 @@ namespace RockPaperScissors
             {
                 
 
-                DisplayResultDialog(resourceLoader.GetString("Invalid IP"), resourceLoader.GetString("The IP is not valid"));
+                DisplayResultDialog("Invalid IP", "The IP is not valid");
             }
             
 

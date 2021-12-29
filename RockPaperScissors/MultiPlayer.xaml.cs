@@ -69,10 +69,32 @@ namespace RockPaperScissors
             enemyStreak.Text = resourceLoader.GetString("Enemy Streak") + ": " + localSettings.Values["pcStreakMultiplayer"];
             addressIP.Text = "Server: " + localSettings.Values["ipAddress"].ToString();
 
+            Window.Current.CoreWindow.CharacterReceived += CoreWindow_CharacterReceived;
+
+
         }
 
 
+        private void CoreWindow_CharacterReceived(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.CharacterReceivedEventArgs args)
+        {
+            //Make keyboard shortcuts work for stuff that doesn't work as KeyboardAccelerator
+            switch (args.KeyCode)
+            {
+                case 53:
+                    if(addressIP.Visibility == Visibility.Collapsed)
+                    {
+                        addressIP.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        addressIP.Visibility = Visibility.Collapsed;
+                    }
+                    
+                    break;
 
+
+            }
+        }
 
         private void PlayerMove_Changed(object sender, SelectionChangedEventArgs e)
         {
@@ -265,6 +287,7 @@ namespace RockPaperScissors
         { 
 
             button.IsEnabled = false;
+            playerMove_RadioButtons.IsEnabled = false;
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             
