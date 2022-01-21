@@ -5,6 +5,11 @@
       "ProjectGuid": "638145dc-b3cf-4c8b-9b17-f61f9e410e70",
       "DisplayName": "RockPaperScissors",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "File esterni",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

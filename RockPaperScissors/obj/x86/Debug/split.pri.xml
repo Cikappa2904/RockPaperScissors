@@ -133,6 +133,11 @@
 					<Value>I'm thinking...</Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="Invalid IP" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Invalid IP">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Invalid IP</Value>
+				</Candidate>
+			</NamedResource>
 			<NamedResource name="Lost" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Lost">
 				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
 					<Value>Lost</Value>
@@ -168,6 +173,11 @@
 					<Value>Streak</Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="The IP is not valid" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/The IP is not valid">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The IP address you inserted is not a valid IP address.</Value>
+				</Candidate>
+			</NamedResource>
 			<NamedResource name="Title" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/Title">
 				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
 					<Value>Rock Paper Scissors</Value>
@@ -183,6 +193,27 @@
 					<Value>Your streak</Value>
 				</Candidate>
 			</NamedResource>
+			<ResourceMapSubtree name="confirmButton">
+				<NamedResource name="Content" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/confirmButton/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Confirm</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="multiplayerSettings">
+				<NamedResource name="Text" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/multiplayerSettings/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Multiplayer settings</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="waitingOpponent">
+				<NamedResource name="Text" uri="ms-resource://37873c79-04f8-499a-b46b-ea6495eecdb8/Resources/waitingOpponent/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Waiting for the opponent...</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
 		</ResourceMapSubtree>
 	</ResourceMap>
 </PriInfo>

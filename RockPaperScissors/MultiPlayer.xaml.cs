@@ -281,6 +281,7 @@ namespace RockPaperScissors
 
             enemyStreak.Text = enemyWinStreak.ToString();
             playerStreak.Text = playerWinStreak.ToString();
+            button.IsEnabled = true;
 
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -299,6 +300,8 @@ namespace RockPaperScissors
             int playerMove = playerMove_RadioButtons.SelectedIndex;
 
             await PlayGame(get_request, playerMove, whoami);
+
+            
 
  
         }
