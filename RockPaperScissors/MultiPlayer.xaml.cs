@@ -206,6 +206,8 @@ namespace RockPaperScissors
                 if(opponent_move == "Request error")
                 {
                     DisplayErrorDialog("An error occurred", "An error occurred while trying to connect to the server");
+                    button.IsEnabled = true;
+                    playerMove_RadioButtons.IsEnabled = true;
                     return;
                 }
 
@@ -213,6 +215,8 @@ namespace RockPaperScissors
                 {
                     break;
                 }
+
+                
 
 
             }

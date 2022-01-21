@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-21T21:00:34.603</Modified>
+      <Modified>2022-01-21T21:13:49.276</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\RockPaperScissors.exe">
       <PackagePath>entrypoint\RockPaperScissors.exe</PackagePath>
-      <Modified>2022-01-21T21:00:33.428</Modified>
+      <Modified>2022-01-21T21:13:48.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -90,23 +90,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-21T21:00:33.324</Modified>
+      <Modified>2022-01-21T21:13:48.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MultiPlayer.xbf">
       <PackagePath>MultiPlayer.xbf</PackagePath>
-      <Modified>2022-01-21T21:00:33.320</Modified>
+      <Modified>2022-01-21T21:13:48.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\SinglePlayer.xbf">
       <PackagePath>SinglePlayer.xbf</PackagePath>
-      <Modified>2022-01-21T21:00:33.323</Modified>
+      <Modified>2022-01-21T21:13:48.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-21T21:00:33.325</Modified>
+      <Modified>2022-01-21T21:13:48.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Settings.xbf">
       <PackagePath>Settings.xbf</PackagePath>
-      <Modified>2022-01-21T21:00:33.325</Modified>
+      <Modified>2022-01-21T21:13:48.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -122,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\RockPaperScissors.exe">
       <PackagePath>RockPaperScissors.exe</PackagePath>
-      <Modified>2022-01-21T21:00:34.592</Modified>
+      <Modified>2022-01-21T21:13:49.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
