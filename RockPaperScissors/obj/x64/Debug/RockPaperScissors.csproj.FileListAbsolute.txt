@@ -174,3 +174,4 @@ C:\Users\cikap\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x64\Debu
 C:\Users\cikap\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cikap\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\cikap\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
