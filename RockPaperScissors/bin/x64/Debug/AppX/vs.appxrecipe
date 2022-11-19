@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>POWERBEAST</Machine>
-    <WindowsUser>cikap</WindowsUser>
+    <Machine>11VM</Machine>
+    <WindowsUser>Windows</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>37873c79-04f8-499a-b46b-ea6495eecdb8</PackageIdentityName>
     <PackageIdentityPublisher>CN=cikap</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>82DD3EA5F944E5A885C4B039C2B00D5F93A8EC43D01A88C12120616E6DA8DF01</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>D10551140C2F8D7EDE6B1797B9B3298EF8FF61B63EF8001AB4EF78B6450AC038</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>37873c79-04f8-499a-b46b-ea6495eecdb8_0.2.4.0_x64__t7ts6zhfm7dxy</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>37873c79-04f8-499a-b46b-ea6495eecdb8_t7ts6zhfm7dxy!App</RegisteredUserModeAppID>
     <RegisteredPackageID>37873c79-04f8-499a-b46b-ea6495eecdb8</RegisteredPackageID>
@@ -27,205 +27,205 @@
     <RegisteredVersion>0.2.4.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-06T20:06:02.270</Modified>
+      <Modified>2022-11-19T18:27:39.595</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\RockPaperScissors.exe">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\RockPaperScissors.exe">
       <PackagePath>entrypoint\RockPaperScissors.exe</PackagePath>
-      <Modified>2022-08-06T20:06:00.218</Modified>
+      <Modified>2022-11-19T18:27:36.306</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cikap\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Windows\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T01:15:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T02:52:00.000</Modified>
+      <Modified>2020-12-02T03:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-22T16:42:43.185</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-11-13T07:38:43.908</Modified>
+      <Modified>2022-11-19T17:31:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.910</Modified>
+      <Modified>2022-11-19T17:31:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.910</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.911</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.912</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.913</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-13T07:38:43.913</Modified>
+      <Modified>2022-11-19T17:31:14.003</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\RockPaperScissors.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\RockPaperScissors.xr.xml">
       <PackagePath>RockPaperScissors.xr.xml</PackagePath>
-      <Modified>2021-12-29T08:27:40.590</Modified>
+      <Modified>2022-11-19T17:31:14.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-08-06T20:06:00.118</Modified>
+      <Modified>2022-11-19T18:27:36.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MultiPlayer.xbf">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MultiPlayer.xbf">
       <PackagePath>MultiPlayer.xbf</PackagePath>
-      <Modified>2022-08-06T20:06:00.112</Modified>
+      <Modified>2022-11-19T18:27:36.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\SinglePlayer.xbf">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\SinglePlayer.xbf">
       <PackagePath>SinglePlayer.xbf</PackagePath>
-      <Modified>2022-08-06T20:06:00.115</Modified>
+      <Modified>2022-11-19T18:27:36.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-08-06T20:06:00.118</Modified>
+      <Modified>2022-11-19T18:27:36.186</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Settings.xbf">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Settings.xbf">
       <PackagePath>Settings.xbf</PackagePath>
-      <Modified>2022-08-06T20:06:00.118</Modified>
+      <Modified>2022-11-19T18:27:36.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2020-12-02T03:31:00.000</Modified>
+      <Modified>2020-12-02T04:31:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T00:52:06.000</Modified>
+      <Modified>2020-12-02T01:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-08-06T20:06:00.783</Modified>
+      <Modified>2022-11-19T18:27:37.642</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\RockPaperScissors.exe">
+    <AppxPackagedFile Include="C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\x64\Debug\Core\RockPaperScissors.exe">
       <PackagePath>RockPaperScissors.exe</PackagePath>
-      <Modified>2022-08-06T20:06:02.257</Modified>
+      <Modified>2022-11-19T18:27:39.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2021-09-14T09:06:08.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.29713.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.29713.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.29713.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\cikap\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Windows\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\cikap\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Windows\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

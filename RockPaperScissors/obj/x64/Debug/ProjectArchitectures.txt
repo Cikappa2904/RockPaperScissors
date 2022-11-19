@@ -1,1 +1,1 @@
-D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\RockPaperScissors.csproj;x64
+C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\RockPaperScissors.csproj;x64

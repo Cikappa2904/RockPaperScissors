@@ -1,3 +1,3 @@
-MainPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\RockPaperScissors_0.2.4.0_ARM_Debug.msix
-SymbolPackage=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\Symbols\RockPaperScissors_0.2.4.0_ARM_Debug.appxsym
-ResourcePack=D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\RockPaperScissors_0.2.4.0_language-it.msix
+MainPackage=C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\RockPaperScissors_0.2.4.0_ARM_Debug.msix
+SymbolPackage=C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\ARM\Debug\Symbols\RockPaperScissors_0.2.4.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\bin\ARM\Debug\RockPaperScissors_0.2.4.0_language-it.msix

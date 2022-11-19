@@ -3,4 +3,4 @@
 "ResourceDimensions"		"language-it-it"
 
 [Files]
-"D:\File Personali\Github\RockPaperScissors\RockPaperScissors\RockPaperScissors\obj\x86\Debug\split.language-it.pri"			"resources.pri"
+"C:\Users\Windows\Documents\GitHub\RockPaperScissors\RockPaperScissors\obj\x86\Debug\split.language-it.pri"			"resources.pri"

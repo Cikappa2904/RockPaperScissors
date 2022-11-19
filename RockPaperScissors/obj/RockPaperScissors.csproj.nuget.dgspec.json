@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {}
+    "C:\\Users\\Windows\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {}
   },
   "projects": {
-    "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {
+    "C:\\Users\\Windows\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
+        "projectUniqueName": "C:\\Users\\Windows\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
         "projectName": "RockPaperScissors",
-        "projectPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
-        "packagesPath": "C:\\Users\\cikap\\.nuget\\packages\\",
-        "outputPath": "D:\\File Personali\\Github\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors\\obj\\",
+        "projectPath": "C:\\Users\\Windows\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
+        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windows\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\cikap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

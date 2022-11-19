@@ -8,7 +8,7 @@
 
   <Identity
     Name="37873c79-04f8-499a-b46b-ea6495eecdb8"
-    Publisher="CN=cikap"
+    Publisher="CN=Claudio"
     Version="0.2.4.0" />
 
   <mp:PhoneIdentity PhoneProductId="37873c79-04f8-499a-b46b-ea6495eecdb8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
